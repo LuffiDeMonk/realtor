@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
+import { Text } from '../animation/TextAnimation'
 
 type Props = {
     title: string,

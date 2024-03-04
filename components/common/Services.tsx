@@ -4,16 +4,15 @@ import CustomSubHeading from './CustomSubHeading'
 import CustomHeading from './CustomHeading'
 import { Services as DUMMY_DATA } from '@/constants/Services'
 import CardAnimation from '../animation/CardAnimation'
+import TextAnimationContainer from '../animation/TextAnimation'
+import TitleAnimation from './BaseAnimation'
 
 export default function Services() {
     return (
         <Container className='my-12'>
-            <CustomSubHeading
-                title='our services'
-            />
-            <CustomHeading
-                title='The smartest way to buy a home'
-                className='my-5'
+            <TitleAnimation
+                subtitle='Our Services'
+                title='The Smartest Way to Buy a Home'
             />
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 my-20">
                 {

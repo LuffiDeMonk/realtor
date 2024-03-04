@@ -28,7 +28,7 @@ export default function Navbar() {
     return (
         <nav className={cn('fixed w-full top-0 z-50 transition-all duration-300', `${scroll ? "bg-white shadow-sm" : ""}`)}>
             <Container className='my-0 px-5 py-8 bg-transparent flex items-center justify-between'>
-                <Link href='/' className='text-2xl font-bold cursor-pointer'>Uptown</Link>
+                <Link href='/' className='text-2xl font-bold select-none'>Uptown</Link>
                 <Navlinks className='hidden lg:flex' />
                 <MobileNavigation />
             </Container>

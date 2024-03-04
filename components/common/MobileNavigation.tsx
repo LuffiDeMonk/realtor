@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import {
     Sheet,
@@ -13,8 +14,10 @@ import { Button } from '../ui/button'
 import { AlignCenter } from 'lucide-react'
 import { Navlinks } from '@/constants/Navlinks'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 
 export default function MobileNavigation() {
+    const search = useSearchParams()
     return (
         <section className='lg:hidden'>
             <Sheet>
@@ -30,6 +33,10 @@ export default function MobileNavigation() {
                                 <Link key={item.id} href={item.path} className='text-xl'>{item.name}</Link>
                             ))
                         }
+                        <Link href={{
+                            pathname: '/properties',
+                            search: search.toString()
+                        }}>Properties</Link>
                     </div>
                 </SheetContent>
             </Sheet>

@@ -24,7 +24,7 @@ export default function FilterSelect({ control, name, selectValues, className, t
             name={name}
             render={({ field }) => (
                 <FormItem className={cn(className)}>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <Select onValueChange={field.onChange} value={field.value}>
                         <FormControl>
                             <SelectTrigger>
                                 <SelectValue placeholder={title} />

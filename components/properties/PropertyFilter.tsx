@@ -32,8 +32,10 @@ export default function PropertyFilter() {
     const onSubmit = (data: z.infer<typeof FormType>) => {
         const params = new URLSearchParams(searchParams)
         const entries = Object.entries(data)
-        entries.forEach(entry => entry[1] !== undefined ? params.set(entry[0], entry[1]) : params.delete(entry[0]))
-        replace(`${pathname}?${params.toString()}`)
+        if (entries) {
+            entries.forEach(entry => entry[1] !== undefined ? params.set(entry[0], entry[1]) : params.delete(entry[0]))
+            replace(`${pathname}?${params.toString()}`, { scroll: false })
+        }
     }
     return (
         <Container className='my-10 space-y-6'>
@@ -60,7 +62,21 @@ export default function PropertyFilter() {
                             title='Sort by price'
                         />
                     </div>
-                    <Button>Search</Button>
+                    <div className='flex flex-col lg:flex-row gap-3'>
+                        <Button>Search</Button>
+                        <Button
+                            variant='secondary'
+                            onClick={() => {
+                                methods.reset({
+                                    category: '',
+                                    purpose: '',
+                                    sort: ''
+                                })
+                            }}
+                        >
+                            Clear Search
+                        </Button>
+                    </div>
                 </form>
             </Form>
         </Container>

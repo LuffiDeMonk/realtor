@@ -1,20 +1,28 @@
 import { BedDouble, Bath, Grid3x3 } from 'lucide-react'
 import React from 'react'
 
-export default function PropertySpecs() {
+export default function PropertySpecs({
+    beds,
+    baths,
+    area
+}: {
+    beds: string,
+    baths: string,
+    area: string
+}) {
     return (
         <div className='my-5 flex items-center gap-3 text-xs sm:text-base'>
             <div className='text-gray-600 flex gap-1 items-center'>
                 <BedDouble size={22} />
-                <p>3</p>
+                <p>{beds}</p>
             </div>
             <div className='text-gray-600 flex gap-1 items-center'>
                 <Bath size={22} />
-                <p>3</p>
+                <p>{baths}</p>
             </div>
             <div className='text-gray-600 flex gap-1 items-center'>
                 <Grid3x3 size={22} />
-                <p>1,843 sqft</p>
+                <p>{`${area} sqft`}</p>
             </div>
 
         </div>

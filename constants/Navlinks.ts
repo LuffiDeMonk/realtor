@@ -21,9 +21,5 @@ export const Navlinks = [
         path: '/contact',
         name: 'Contact'
     },
-    {
-        id: uuid(),
-        path: '/properties',
-        name: 'Properties'
-    },
+
 ]
