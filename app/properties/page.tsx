@@ -10,7 +10,8 @@ type Props = {
     searchParams?: {
         purpose?: string,
         category?: string,
-        sort?: string
+        sort?: string,
+        page?: string
     }
 }
 
@@ -18,6 +19,7 @@ export default function Properties({ searchParams }: Props) {
     const purpose = searchParams?.purpose || ''
     const category = searchParams?.category || ''
     const sort = searchParams?.sort || ''
+    const page = searchParams?.page || '1'
 
     return (
         <>
@@ -27,11 +29,12 @@ export default function Properties({ searchParams }: Props) {
             <Suspense>
                 <PropertyFilter />
             </Suspense>
-            <Suspense fallback={<CardSkeletonContainer skeletonCount={6} />} key={purpose + category + sort}>
+            <Suspense fallback={<CardSkeletonContainer skeletonCount={6} />} key={purpose + category + sort + page}>
                 <PropertyCardWrapper
                     purpose={purpose}
                     category={category}
                     sort={sort}
+                    page={page}
                 />
             </Suspense>
         </>

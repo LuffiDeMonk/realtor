@@ -2,7 +2,8 @@ interface PropertyDetails {
     hits: PropertyCardDetails[],
     nbHits: number,
     page: number,
-    exhaustiveNbHits: boolean
+    exhaustiveNbHits: boolean,
+    nbPages: number
 }
 
 interface PropertyCardDetails {

@@ -33,10 +33,12 @@ export default function MobileNavigation() {
                                 <Link key={item.id} href={item.path} className='text-xl'>{item.name}</Link>
                             ))
                         }
-                        <Link href={{
-                            pathname: '/properties',
-                            search: search.toString()
-                        }}>Properties</Link>
+                        <Link
+                            className='text-xl'
+                            href={{
+                                pathname: '/properties',
+                                search: search.toString()
+                            }}>Properties</Link>
                     </div>
                 </SheetContent>
             </Sheet>

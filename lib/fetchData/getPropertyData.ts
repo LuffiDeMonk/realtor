@@ -1,6 +1,6 @@
 type Props = {
     hitsPerPage?: number,
-    page?: number,
+    page?: string | number,
     sort?: string,
     category?: string,
     purpose?: string
