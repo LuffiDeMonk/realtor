@@ -1,8 +1,7 @@
 'use client'
 
+import React from 'react'
 import { usePathname } from 'next/navigation'
-import React, { useMemo } from 'react'
-import { motion } from 'framer-motion'
 import { Separator } from '../ui/separator'
 import Link from 'next/link'
 import TextAnimationContainer, { Text } from '../animation/TextAnimation'

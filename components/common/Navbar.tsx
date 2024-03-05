@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
+import React, { Suspense, useEffect, useRef, useState } from 'react'
 import Container from './Container'
 import Navlinks from './Navlinks'
 import MobileNavigation from './MobileNavigation'

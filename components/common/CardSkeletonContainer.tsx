@@ -9,9 +9,9 @@ export default function CardSkeletonContainer({ skeletonCount, containerStyles, 
         <CardContainer className={containerStyles}>
             {
                 Array(skeletonCount).fill('1').map((_, idx) => (
-                    <CardAnimation index={idx} key={idx}>
+                    <div key={idx}>
                         <Skeleton className={cn('h-80', cardStyles)} />
-                    </CardAnimation>
+                    </div>
                 ))
             }
         </CardContainer>
