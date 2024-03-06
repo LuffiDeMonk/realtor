@@ -5,7 +5,7 @@ export default function PropertyFeatureCard({ title, value }: { title: string, v
     return (
         <li className="flex items-center gap-2 text-gray-400">
             <Check size={15} />
-            <p>{title}: {value}</p>
+            <p className='capitalize'>{title}: {value}</p>
         </li>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Tabs, TabsList, TabsTrigger } from '../ui/tabs'
-import { Separator } from '../ui/separator'
+import { Tabs, TabsList, TabsTrigger } from '../../ui/tabs'
+import { Separator } from '../../ui/separator'
 
 export default function PropertyTabs({ children }: { children: React.ReactNode }) {
     return (

@@ -12,18 +12,33 @@ interface PropertyCardDetails {
     price: number,
     product: string,
     title: string,
-    location: [
-        {
-            id: number,
-            name: string,
-        }
-    ],
+    geography: {
+        lat: number,
+        lng: number
+    },
     rooms: number,
     baths: number,
     area: number,
+    description: string,
     coverPhoto: {
         url: string
-    }
+    },
+    photos:
+    {
+        id: number,
+        externalID: string,
+        title: string,
+        url: string,
+    }[],
+    phoneNumber: {
+        mobile: string,
+        phone: string,
+    },
+    contactName: string,
+    cityLevelScore: number,
+    completionStatus: string,
+    randBoostScore: number,
+    indyScore: number
 }
 
 interface AgentDetails {
